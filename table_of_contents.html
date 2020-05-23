@@ -1,0 +1,31 @@
+---
+layout: page
+title: Table Of Contents
+---
+  <div class="entry">
+      <h3>Welcome,</h3>
+      <p>here You can find short descriptions of contents:</p>
+  </div>
+
+  {% for post in site.posts %}
+  <li class="toc-item" data-url="{{ post.url }}"><a href="#">{{ post.title }}</a> : {{ post.excerpt }}
+  </li>
+  {% endfor %}
+
+  <script>
+      $(document).ready(
+          function() {
+              $("li.toc-item").click(function() {
+                  var title = $(this)[0].childNodes[0].text;
+                  $("li.active").removeClass("active");
+                  for (var item of document.getElementsByClassName("menu-item")) {
+                          if (item.textContent == title) {
+                              item.classList.add("active");
+                          }
+                      }
+                  var url = $(this).attr("data-url");
+                  $("#page-content").load(url);
+                  $(".page-header").text(title);
+              });
+          });
+    </script>
