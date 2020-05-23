@@ -15,12 +15,12 @@ Environment setup:
 - server with environment for android development with two phone devices and printer connected, NAS sertup
 
 Server:
-  1. Multiverse  supervisor executes and updates services, control resources and shares them to services
+  1. Multiverse - supervisor executes and updates services, control resources and shares them to services
   2. Services - dockerized to be easily updated and tested
-  2.1. 3DPrinterUniverseService - compiling Ender software, control printer, update sotfware
-  2.2. WatchmanUniverseService - compiling Andoroid, watchman application, update devices
-  2.3. StreamingUniverseService - shareing data, streaming content
-  2.4. HouseKeeperUniverseService - tracks Universes dependencies, builds Universe and performs tests, build Multivers
+     1. 3DPrinterUniverseService - compiling Ender software, control printer, update sotfware
+     2. WatchmanUniverseService - compiling Andoroid, watchman application, update devices
+     3. StreamingUniverseService - shareing data, streaming content
+     4. HouseKeeperUniverseService - tracks Universes dependencies, builds Universe and performs tests, build Multivers
   
   
 TODO: create common flow for Universes i.e.: setup environemnt variables.
